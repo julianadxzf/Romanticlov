@@ -1,0 +1,84 @@
+/* Fondo de pantalla con imagen */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('btsfondo.jpg'); /* Asegúrate de tener una imagen de alta calidad */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen cuando se desplaza la página */
+    filter: brightness(1.3) contrast(1.2); /* Aclara la imagen y mejora el contraste */
+    color: white; /* Color de texto blanco para que se lea sobre el fondo */
+    text-align: center; /* Centra el texto */
+    padding: 0;
+    margin: 0;
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Contenedor del texto con fondo blanco semi-transparente */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    max-width: 90%; /* Limita el ancho máximo */
+    text-align: center;
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 40px;
+    color: #9C4E97; /* Color bonito para el título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+}
+
+/* Estilo del párrafo */
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333; /* Color oscuro para el texto */
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para que se lea mejor */
+}
+
+/* Estilo del botón */
+button {
+    background-color: #9C4E97;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #7A3C75; /* Efecto hover */
+    transform: scale(1.1);
+}
+
+/* Estilo para el mensaje sorpresa */
+#specialMessage {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #9C4E97;
+    display: none; /* Inicialmente oculto */
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Animación para que el mensaje aparezca suavemente */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Desliza el mensaje desde arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
